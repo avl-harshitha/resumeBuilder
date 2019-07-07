@@ -1,0 +1,229 @@
+<html>
+<head>
+<title>Build processing</title>
+</head>
+<body
+background="http://blog.visme.co/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-040.jpg">
+<h1>Enter Details</h1>
+<h2><b>Personal Information:</b></h2>
+<!-- <form> -->
+<form method="post" action ="/create" >
+  
+  <fieldset>
+    <legend>Personal information:</legend>
+  First name:<br>
+  <!-- <input type="text" name="firstname"><br> -->
+  {{form.FirstName}}
+  <br>Last name:<br>
+  {{form.LastName}}
+  <!-- <input type="text" name="lastname"><br> -->
+  <br>Mobile Number:<br>
+  {{form.MobileNumber}}
+  <!-- <input type="text" name="mobilenumber"><br> -->
+  <br>Residentail Address:<br>
+  {{form.ResidentailAddress}}
+  <!-- <input type="text" name="residentialaddress"><br> -->
+  <br>City:<br>
+  {{form.City}}
+  <!-- <input type="text" name="City"><br> -->
+  <br>State:<br>
+  {{form.State}}
+  <!-- <input type="text" name="State"><br> -->
+  <br>Pincode:<br>
+  {{form.Pincode}}
+  <!-- <input type="text" name="pincode"><br> -->
+  <h4>Gender</h4>
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other<br>
+<h4>Date of Birth</h4>
+{{form.DateOfBirth}}
+<!-- <select>
+<option value="jan">JAN</option>
+<option value="feb">FEB</option>
+<option value="mar">MAR</option>
+<option value="apr">APR</option>
+<option value="may">MAY</option>
+<option value="jun">JUNE</option>
+<option value="jul">JULY</option>
+<option value="aug">AUG</option>
+<option value="sept">SEPT</option>
+<option value="oct">OCT</option>
+<option value="nov">NOV</option>
+<option value="dec">DEC</option>
+</select>
+<select>
+<option value="y1">1990</option>
+<option value="y2">1991</option>  
+<option value="y3">1992</option>
+<option value="y4">1993</option>
+<option value="y5">1994</option>
+<option value="y6">1995</option>
+<option value="y7">1996</option>
+<option value="y8">1997</option>
+<option value="y9">1998</option>
+<option value="y10">1999</option>
+<option value="y11">2001</option>
+<option value="y12">2002</option>
+<option value="y13">2003</option>
+<option value="y14">2004</option>
+<option value="y15">2005</option>
+<option value="y16">2006</option>
+<option value="y17">2007</option>
+<option value="y18">2008</option>
+<option value="y19">2009</option>
+<option value="y20">2010</option>
+<option value="y21">2011</option>
+<option value="y22">2012</option>
+<option value="y23">2013</option>
+<option value="y24">2014</option>
+<option value="y25">2015</option>
+<option value="y26">2016</option>
+<option value="y27">2017</option>
+<option value="y28">2018</option>
+<option value="y29">2019</option>
+<option value="y30">2020</option>
+</select><br> -->
+<!-- <button type="button1" onclick="alert('Confirm updation')">UPDATE</button>&nbsp
+<button type="button2" onclick="alert('Confirm Cancelllation')">CANCEL</button>&nbsp -->
+</fieldset>
+
+
+
+<fieldset>
+    <legend>Summary:</legend>
+    {{form.Summary}}
+<!-- <textarea name="message" rows="10" cols="70"> Enter a brief summary of your education, work history, and skills that make you a great fit for the job you�re applying for....</textarea><br> -->
+<!-- <button type="button11" onclick="alert('Confirm updation')">UPDATE</button>&nbsp
+<button type="button12" onclick="alert('Confirm Cancelllation')">CANCEL</button>&nbsp -->
+</fieldset>
+
+
+
+<fieldset>
+    <legend>Education:</legend>
+College Name:<br>
+{{form.CollegeName}}
+  <!-- <input type="text" name="clg">-->
+    <br> 
+CGPA:<br>
+  <!-- <input type="text" name="gpa"> -->
+  {{form.Cgpa}}
+  <br>
+<select>
+<option value="">Graduated</option>
+<option value="">Graduating</option>
+<option value="">Transferred</option>
+</select>
+<select><option value="y26">2016</option>
+<option value="y27">2017</option>
+<option value="y28">2018</option>
+<option value="y29">2019</option>
+<option value="y30">2020</option></select><br>
+{{form.EducationSummary}}
+<!-- <textarea name="message2" rows="10" cols="70"> Enter a brief summary of your education, academic achievements, cirtifications, etc ....</textarea><br> -->
+<!-- <button type="button3" onclick="alert('Confirm updation')">UPDATE</button>&nbsp -->
+<!-- <button type="button4" onclick="alert('Confirm Cancelllation')">CANCEL</button>&nbsp -->
+</fieldset>
+
+
+<fieldset>
+    <legend>Employment History:</legend>
+Job Title:<br>
+{{form.JobTitle}}
+  <!-- <input type="text" name="job"> -->
+Company:
+{{form.Company}}
+  <!-- <input type="text" name="company"> -->
+  <br>
+Location:<br>
+{{form.Location}}
+  <!-- <input type="text" name="location"> -->
+  <br>
+
+<select>
+<option value="we">Work Experience</option>
+<option value="s">Student</option>
+<option value="f">Fresher</option>
+<option value="l">Less than 1 year</option>
+<option value="g">Less than 2 years</option>
+<option value="gg">Greater than 2 years</option>
+</select><br>
+{{form.WorkSummary}}
+<!-- <textarea name="message" rows="10" cols="70"> Enter a brief summary of your  work history, and skills that make you a great fit for the job you�re applying for....</textarea> -->
+</fieldset>
+<fieldset>
+    <legend>Hobbies & Interests:</legend>
+    {{form.HobbiesSummary}}
+<!-- <textarea name="message3" rows="10" cols="70">Enter a brief summary of the hobbies and interests that make you unique.....</textarea><br> -->
+<!-- <button type="button5" onclick="alert('Confirm updation')">UPDATE</button>&nbsp -->
+<!-- <button type="button6" onclick="alert('Confirm Cancelllation')">CANCEL</button>&nbsp -->
+</fieldset>
+
+
+<fieldset>
+    <legend>Personal Skills:</legend>
+Skill:<br>
+  <!-- <input type="text" name="skill"> -->
+  {{form.Skill}}
+<select>
+<option value="beg">Beginner</option>
+<option value="com">Competent</option>
+<option value="int">Intermediate</option>
+<option value="adv">Advanced</option>
+<option value="exp">Expert</option>
+</select></br>
+{{form.SkillSummary}}
+<!-- <textarea name="message4" rows="10" cols="70">Enter a brief summary of the paper/poster presentaions and the topics.....</textarea><br> -->
+<!-- <button type="button7" onclick="alert('Confirm updation')">UPDATE</button>&nbsp -->
+<!-- <button type="button8" onclick="alert('Confirm Cancelllation')">CANCEL</button>&nbsp -->
+</fieldset>
+
+
+<fieldset>
+    <legend>Languages:</legend>
+Language:<br>
+{{form.Language}}
+  <!-- <input type="text" name="language"> -->
+<select>
+<option value="beg">Beginner</option>
+<option value="com">Competent</option>
+<option value="int">Intermediate</option>
+<option value="adv">Advanced</option>
+<option value="exp">Expert</option>
+</select></br>
+<!-- <button type="button9" onclick="alert('Confirm updation')">UPDATE</button>&nbsp
+<button type="button10" onclick="alert('Confirm Cancelllation')">CANCEL</button>&nbsp -->
+</fieldset>
+
+
+<fieldset>
+    <legend>Reference:</legend>
+Name:
+{{form.RefName}}
+  <!-- <input type="text" name="n1"> -->
+Contact number:
+{{form.RefNo}}
+  <!-- <input type="text" name="c2"> -->
+  <br>
+Address:
+  <!-- <input type="text" name="a2"> -->
+  {{form.RefAdd}}
+Email:
+  <!-- <input type="text" name="e2"> -->
+  {{form.RefEmail}}
+  <br>
+Company:<br>
+  <!-- <input type="text" name="com2"> -->
+  {{form.RefCompany}}
+  <br>
+<!-- <button type="button11" onclick="alert('Confirm updation')">UPDATE</button>&nbsp -->
+<!-- <button type="button12" onclick="alert('Confirm Cancelllation')">CANCEL</button>&nbsp -->
+</fieldset>
+<button type="submit" >Submit using POST</button>
+</form>
+<!-- <button type="button" onclick="alert('Confirm Subission')"><a href="three.html">SUBMIT</a></button> -->
+
+
+</body>
+</html>

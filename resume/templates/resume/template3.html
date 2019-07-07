@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Distinguished Template</title>
+</head>
+<body background="http://tafnn.tntsj.com/images/20855-3.jpg">
+<h1 align="center">{{person.FirstName}} {{person.LastName}}</h1>
+<h4 align="center">{{person.ResidentailAddress}},{{person.City}},{{person.State}},{{person.MobileNumber}}</h4>
+<hr>
+<h2 align="center">Summary(Career Objective)</h2>
+<ul type="disc">
+        {% for sumline in person.splitsummary %}
+        <li>{{ sumline }}</li><br>
+        {% endfor %}
+</ul>
+<h2 align="center">Educational Qualifications</h2>
+<ol type="1">
+        <li>Engineering from {{person.CollegeName}} with CGPA {{person.Cgpa}}</li>
+        {% for sumline in person.spliteducationsummary %}
+        <li>{{ sumline }}</li><br>
+        {% endfor %}
+</ol>
+<h2 align="center">Employment History</h2>
+
+<ol type="1">
+        <li>Worked in {{person.Company}} as {{person.JobTitle}} at {{person.Location}}</li>
+        {% for sumline in person.splitworksummary %}
+        <li>{{ sumline }}</li><br>
+        {% endfor %}
+</ol>
+<h2 align="center">Hobbies and Interests</h2>
+
+<ul type="disc">
+        {% for sumline in person.splithobbiessummary %}
+        <li>{{ sumline }}</li><br>
+        {% endfor %}
+</ul>
+<h2 align="center">Personal Skills</h2>
+
+<ol type="1">
+<li>skill-level</li>
+<li>skill-level</li>
+<li>skill-level</li>
+<p>{{person.SkillSummary}}</p>
+</ol>
+<h2 align="center">Languages Known</h2>
+
+<ul type="disc">
+        {% for sumline in person.splitlang %}
+        <li>{{ sumline }}</li><br>
+        {% endfor %}
+</ul>
+<h2 align="center">Reference</h2>
+
+<ol type="1">
+        <br>Name : {{person.RefName}}
+        <br>Contact No: {{person.RefNo}}
+        <br>Company : {{person.RefCompany}}
+        <br>Email : {{person.RefEmail}}
+</ol>
+</body>
+</html>

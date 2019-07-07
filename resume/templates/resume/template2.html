@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 1200px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+</head>
+
+<body background="http://tafnn.tntsj.com/images/20855-3.jpg">
+<h1>{{person.FirstName}} {{person.LastName}}</h1>
+<h4 align="right">{{person.ResidentailAddress}},{{person.City}},{{person.State}},{{person.MobileNumber}}</h4>
+<hr>
+
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Summary(Career Objective)</h2>
+<hr>
+<ul type="disc">
+    {% for sumline in person.splitsummary %}
+    <li>{{ sumline }}</li><br>
+    {% endfor %}
+
+</ul>
+<h2>Educational Qualifications</h2>
+<hr>
+<ol type="1">
+        <li>Engineering from {{person.CollegeName}} with CGPA {{person.Cgpa}}</li>
+        {% for sumline in person.spliteducationsummary %}
+        <li>{{ sumline }}</li><br>
+        {% endfor %}
+</ol>
+<h2>Employment History</h2>
+<hr>
+<ol type="1">
+        <li>Worked in {{person.Company}} as {{person.JobTitle}} at {{person.Location}}</li>
+        {% for sumline in person.splitworksummary %}
+        <li>{{ sumline }}</li><br>
+        {% endfor %}
+</ol>
+<h2>Hobies and Interests</h2>
+<hr>
+<ul type="disc">
+        {% for sumline in person.splithobbiessummary %}
+        <li>{{ sumline }}</li><br>
+        {% endfor %}
+        
+</ul>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    
+<h2>Personal Skills</h2>
+<hr>
+<ol type="1">
+<li>skill-level</li>
+<li>skill-level</li>
+<li>skill-level</li>
+<p>{{person.SkillSummary}}</p>
+</ol>
+<h2>Languages Known</h2>
+<hr>
+<ul type="disc">
+        {% for sumline in person.splitlang %}
+        <li>{{ sumline }}</li><br>
+        {% endfor %}
+</ul>
+<h2>Reference</h2>
+<hr>
+<ol type="1">
+        <br>Name : {{person.RefName}}
+        <br>Contact No: {{person.RefNo}}
+        <br>Company : {{person.RefCompany}}
+        <br>Email : {{person.RefEmail}}
+</ol>
+  </div>
+</div>
+
+</body>
+</html>

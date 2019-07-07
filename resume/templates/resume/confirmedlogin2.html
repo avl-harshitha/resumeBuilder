@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Login</title>
+</head>
+<body background="http://blog.visme.co/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-040.jpg">
+<h1 align="center">Login</h1>
+<fieldset>
+<h3>Details have been successfully recorded...Please enter name and date of birth</h3>
+<form method="post" action ="/template2" >
+  {%csrf_token%}
+  Name:<br>
+  {{form.FirstNameLogin}}
+  <!-- <input type="text" name="name"> -->
+  <br>
+  Date Of Birth:<br>
+  <!-- <input type="text" name="dob"> -->
+  {{form.DateOfBirthLogin}}
+  <br>
+  <input type="submit" value="submit"/>
+</form>
+</fieldset>
+
+</body>
+</html>
